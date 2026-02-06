@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Personal Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fa;color:#333;scroll-behavior:smooth}
+
+/* Header */
+header{background:#111;color:#fff;padding:15px 40px;position:sticky;top:0;z-index:1000}
+nav{display:flex;justify-content:space-between;align-items:center}
+nav h2{font-weight:600}
+nav ul{list-style:none;display:flex;gap:20px}
+nav a{color:#fff;text-decoration:none;position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#00adb5;transition:.3s}
+nav a:hover::after{width:100%}
+
+/* Sections */
+section{padding:60px 40px}
+.container{max-width:1100px;margin:auto}
+h1,h2{margin-bottom:20px}
+
+/* Hero */
+.hero{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:30px}
+.hero img{width:220px;border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.hero-text{max-width:600px}
+.hero-text h1{font-size:2.5rem}
+.hero-text span{color:#00adb5}
+
+/* Skills */
+.skills ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.skills li{background:#00adb5;color:#fff;padding:10px;border-radius:6px;text-align:center;transition:.3s}
+.skills li:hover{transform:scale(1.05)}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.project-card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,.1);transition:.3s}
+.project-card:hover{transform:translateY(-5px)}
+
+/* Contact */
+.contact p{margin:10px 0}
+
+/* Footer */
+footer{text-align:center;background:#111;color:#fff;padding:15px;margin-top:30px}
+
+/* Responsive Menu */
+.menu-toggle{display:none;font-size:24px;cursor:pointer}
+
+@media(max-width:768px){
+  nav ul{display:none;flex-direction:column;background:#111;position:absolute;top:60px;right:0;width:200px;padding:20px}
+  nav ul.show{display:flex}
+  .menu-toggle{display:block}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h2>MyPortfolio</h2>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home">
+<div class="container hero">
+<div class="hero-text">
+<h1>Hello, I'm <span>santhosh R</span></h1>
+<p>
+A passionate developer creating responsive and user-friendly websites.
+This portfolio showcases my skills, projects, and experience.
+</p>
+</div>
+<img src="3135715.png" alt="Profile Image">
+</div>
+</section>
+
+<section id="skills" class="skills">
+<div class="container">
+<h2>Skills</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Python</li>
+<li>Java</li>
+<li>Responsive Design</li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Personal responsive portfolio site.</p>
+</div>
+<div class="project-card">
+<h3>Job Portal UI</h3>
+<p>Candidate profile and recruiter dashboard.</p>
+</div>
+<div class="project-card">
+<h3>Admin Dashboard</h3>
+<p>Skeleton loading dashboard UI.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<h2>Contact</h2>
+<p>Email: yourmail@example.com</p>
+<p>Phone: +91 9876543210</p>
+<p>Location: Erode, Tamil Nadu</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Personal Portfolio | Designed for Assignment Submission</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
